@@ -1,3 +1,6 @@
 Hunt for net.exe command usage
 
+Reference:
+https://blogs.jpcert.or.jp/en/2016/01/windows-commands-abused-by-attackers.html
+
 ProcessCMD RegExp "net\s+group" OR ProcessCMD RegExp "net\s+localgroup" OR ProcessCMD RegExp "net\s+user" OR ProcessCMD RegExp "net\s+use" OR ProcessCMD RegExp "net\s+view" OR ProcessCMD RegExp "net\s+config" OR ProcessCMD RegExp "net\s+share"
