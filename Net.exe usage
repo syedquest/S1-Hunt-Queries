@@ -1,0 +1,3 @@
+Hunt for net.exe command usage
+
+ProcessName contains "net.exe" AND (ProcessCMD RegExp "group" OR ProcessCMD RegExp "localgroup" OR ProcessCMD RegExp "user")
