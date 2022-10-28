@@ -1,0 +1,5 @@
+Queries for suspicious powershell commands from applications
+
+(ParentProcessName RegExp "wscript" OR ParentProcessName RegExp "cscript") AND ProcessName RegExp "powershell"
+
+It is false positive when:
