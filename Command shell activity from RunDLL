@@ -1,0 +1,11 @@
+Title:
+Command shell activity from RunDLL
+
+Description:
+Command shell activities that started from RunDLL which could be a malicious activity
+
+Reference:
+https://attack.mitre.org/techniques/T1059/
+
+Query:
+ParentProcessName contains "rundll32.exe" AND (ProcessName contains "cmd.exe" OR ProcessName contains "powershell.exe")
