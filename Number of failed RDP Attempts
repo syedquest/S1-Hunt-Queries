@@ -1,1 +1,15 @@
+Title:
+Number of failed RDP attempts
 
+Description:
+Display the number of RDP attempts using S1 PowerQuery
+
+Reference:
+https://attack.mitre.org/techniques/T1110/
+
+Query:
+event.category = 'logins'
+event.login.loginIsSuccessful=false
+| group Attempts=count(event.login.loginIsSuccessful=false) by even.login.userName, endpoint.name, src.endpoint.ip.address, 
+  event.login.failureReaseon, src.process.cmdline, src.port.number = 3389
+| sort -Attempts
