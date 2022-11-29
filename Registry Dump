@@ -1,0 +1,14 @@
+Title:
+Registry Duno
+
+Description:
+Usage of reg.exe to dump SAM, system and security hives
+
+Reference:
+https://attack.mitre.org/techniques/T1003/002/
+ART Test 1 ..... 
+
+Query:
+ProcessName contains "reg.exe" AND ((ProcessCMD contains "save" OR ProcessCMD contains "export") AND 
+(ProcessCMD contains "system" OR ProcessCMD contains "security" OR ProcessCMD contains "sam"))
+
